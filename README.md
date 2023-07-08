@@ -84,7 +84,7 @@ What has it been done? __express__ was used to create a Node.js server and it wi
 To initialize it
 
 ```bash
-  node index.js
+  node health_service.js
 ```
 
 Now, the server is created and running, this is just the first step to make an amazing app, step by step a great project will be built
@@ -106,7 +106,7 @@ It is recommended to install this dependency as global because it will not be us
 To use it, instead of using __node index.js__, the server needs to be run as follows
 
 ```bash
-  nodemon index.js
+  nodemon health_service.js
 ```
 
 To prove whether or not it is working, just make a change in file __index.js__ and save it. The server had to be restarted
@@ -126,7 +126,7 @@ The point is to use a custom command
 instead of it
 
 ```bash
-  nodemon index.js
+  nodemon health_service.js
 ```
 
 __dev__ will be a word to identify when the app is running in a development scenario, that's why it often needs to be restarted. To achieve it, __scripts__ object of the file __package.json__ needs to be modified as follows
@@ -134,7 +134,7 @@ __dev__ will be a word to identify when the app is running in a development scen
 ```javascript
   "scripts": {
     /// ...
-    "dev": "nodemon index.js",
+    "dev": "nodemon health_service.js",
     /// ...
   }
 ```
@@ -419,9 +419,9 @@ File __package.json__ should look like
     "name": "nodejs-express-template",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "health_service.js",
     "scripts": {
-      "dev": "nodemon index.js",
+      "dev": "nodemon health_service.js",
       "lint": "eslint .",
       "lint:fix": "eslint . --fix",
       "format": "prettier-eslint \"$PWD/{,!(node_modules)/**/}*.{js,json}\"",
@@ -485,7 +485,7 @@ nodeJS-express-template
 |   app.js
 |   config.js
 |   Dockerfile
-|   index.js
+|   health_service.js
 |   package-lock.json
 |   package.json
 │   README.md
@@ -494,18 +494,18 @@ nodeJS-express-template
     |   validateAuth.js
     |   validateSchemas.js
 └───routes
-    |   index.js
+    |   health_service.js
 └───services
     |   mongoose.js
 └───src
     └───users
-        |   routes.js
-        └───controller
-            │   index.js
+        |   image_controller.js
+        └───controllers
+            │   health_service.js
         └───models
             │   mongoose.js
         └───utils
-            │   schemasValidation.js
+            │   user.js
 ```
 
 Let's define them
